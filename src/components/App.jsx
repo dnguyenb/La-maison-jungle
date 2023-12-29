@@ -1,12 +1,12 @@
 import Banner from './Banner';
-import Cart from './Cart';
 import ShoppingList from './ShoppingList';
+// import Cart from './Cart';
 
 function App() {
 	return (
 		<div>
 			<Banner />
-			<Cart />
+			{/* <Cart /> */} 
 			<ShoppingList />
 		</div>
 	);
