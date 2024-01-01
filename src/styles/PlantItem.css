@@ -1,7 +1,8 @@
 .lmj-plant-item-cover {
-    height: 220px;
-    width: 220px;
+    height: 250px;
+    width: 250px;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .lmj-plant-item {
@@ -10,5 +11,15 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    border: 3px solid #31b572;
+    border-radius: 20px;
+    padding: 0.4rem;
     text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.lmj-plant-item:hover {
+    transform: scale(1.1);
 }

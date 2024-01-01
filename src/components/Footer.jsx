@@ -8,7 +8,7 @@ function Footer() {
 		setInputValue(e.target.value);
 	}
 
-	function handleBlur() {
+	function handleOnBlur() {
 		if (!inputValue.includes('@')) {
 			alert(
 				"Attention, il n'y a pas d'@, ceci n'est pas une adresse valide 😥"
@@ -26,7 +26,7 @@ function Footer() {
 				placeholder="Saisissez ici votre e-mail"
 				onChange={handleInput}
 				value={inputValue}
-				onBlur={handleBlur}
+				onBlur={handleOnBlur}
 			/>
 		</footer>
 	);
