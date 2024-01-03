@@ -3,7 +3,12 @@ import '../styles/Cart.css';
 
 function Cart({ cart, updateCart }) {
 	const [isOpen, setIsOpen] = useState(false);
-	const monsteraPrice = 8;
+	const total = cart.reduce(
+		(acc, plantType) => acc + plantType.amount * plantType.price,
+		0
+	);
+
+	alert(`J'aurai ${total}€ à payer 💸`);
 
 	return isOpen ? (
 		<div className="lmj-cart">
@@ -14,7 +19,7 @@ function Cart({ cart, updateCart }) {
 				fermer le panier
 			</button>
 			<h2>Panier</h2>
-			<h3>Total : {monsteraPrice * cart}€</h3>
+			<h3>Total :{total}€</h3>
 			<button onClick={() => updateCart(0)}>Vider le panier</button>
 		</div>
 	) : (
