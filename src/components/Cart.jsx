@@ -8,7 +8,7 @@ function Cart({ cart, updateCart }) {
 		0
 	);
 	useEffect(() => {
-		alert(`J'aurais ${total}€ à payer`);
+		document.title = `LMJ | votre panier : ${total}€ d'achats`;
 	}, [total]);
 
 	return isOpen ? (
@@ -29,7 +29,7 @@ function Cart({ cart, updateCart }) {
 							</div>
 						))}
 					</ul>
-					<h3>Total :{total}€</h3>
+					<h3>Total : {total}€</h3>
 					<button onClick={() => updateCart([])}>Vider le panier</button>
 				</div>
 			) : (
